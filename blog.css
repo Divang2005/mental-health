@@ -26,10 +26,6 @@ nav a {
   font-weight: bold;
 }
 
-nav a.active {
-  text-decoration: underline;
-}
-
 .blog-container {
   max-width: 1000px;
   margin: 2rem auto;
