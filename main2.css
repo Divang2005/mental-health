@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #4a90e2;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    background-color: #357ABD;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto; 
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.start-btn {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.start-btn:hover {
+  background-color: #333;
+}
+
+
+.about {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* .result {
+  background-color: #e0f7fa;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.result h3 {
+  margin-top: 0;
+} */
+
+
+footer{
+  background: #357ABD;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

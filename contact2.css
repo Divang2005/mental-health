@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fb;
+  color: #333;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+nav {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    background-color: #357ABD;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+ 
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.experts {
+  margin-bottom: 3rem;
+}
+
+.experts h2, .user-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.expert-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.user-form form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #357ABD;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #245c9a;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.back-btn:hover {
+    background: #357ABD;
+}
+
+footer{
+  background: #357ABD;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

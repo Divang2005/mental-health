@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Mental Health Awareness</title>
+  <link rel="stylesheet" href="contact2.css" />
+</head>
+<body>
+  <header>
+    <h1>Contact & Support</h1> 
+    <p>Connect with our experts or reach out for support</p>
+  </header>
+
+  <nav>
+    <a href="main2.html">Home</a>
+    <a href="test2.html">Personality Test</a>
+    <a href="about.html">About</a>
+    <a href="disorder.html">Disorders</a>
+    <a href="resources.html">Resources</a>
+    <a href="blog.html">Blogs</a>
+    <a href="stories.html">Stories</a>
+  </nav>
+
+  <main class="container">
+    <section class="experts">
+      <h2>Meet Some Mental Health Experts</h2>
+
+        <div class="expert-card">
+          <h3>Dr. Meera Sharma</h3>
+          <p><strong>Profession:</strong> Clinical Psychologist</p>
+          <p><strong>Experience:</strong> 12+ years</p>
+          <p><strong>Email:</strong> meera.sharma@example.com</p>
+        </div>
+
+        <div class="expert-card">
+          <h3>Mr. Arjun Verma</h3>
+          <p><strong>Profession:</strong> Motivational Speaker</p>
+          <p><strong>Experience:</strong> 9 years</p>
+          <p><strong>Email:</strong> arjun.verma@example.com</p>
+        </div>
+
+        <div class="expert-card">
+          <h3>Dr. Sneha Kapoor</h3>
+          <p><strong>Profession:</strong> Psychiatrist</p>
+          <p><strong>Experience:</strong> 15 years</p>
+          <p><strong>Email:</strong> sneha.kapoor@example.com</p>
+        </div>
+
+        <div class="expert-card">
+          <h3>Mr. Aman Verma</h3>
+          <p><strong>Profession:</strong> Motivational Speaker</p>
+          <p><strong>Experience:</strong> 8 years in youth and student empowerment</p>
+          <p><strong>Email:</strong> aman.verma@example.com</p>
+          <p><strong>Phone:</strong> +91-9123456780</p>
+        </div>
+
+        <div class="expert-card">
+          <h3>Dr. Riya Mehta</h3>
+          <p><strong>Profession:</strong> Clinical Psychologist</p>
+          <p><strong>Experience:</strong> 12 years in CBT and adolescent therapy</p>
+          <p><strong>Email:</strong> riya.mehta@example.com</p>
+          <p><strong>Phone:</strong> +91-9876543210</p>
+       </div>
+    </section>
+
+    <section class="user-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="thankYouMsg" style="display:none; color: green; font-weight: bold;">Thank you! Your message has been received.</p>
+      </form>
+    </section>
+  </main>
+
+  <div class="container">
+    <a href="main2.html" class="back-btn">⬅ Back to Home</a>
+  </div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const thankYouMsg = document.getElementById("thankYouMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.reset();
+      thankYouMsg.style.display = "block";
+    });
+  </script>
+
+    <footer>
+        <p>&copy; made by divang goyal</p>
+    </footer>
+</body>
+</html>
