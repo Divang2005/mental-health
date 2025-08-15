@@ -174,32 +174,47 @@
   form.appendChild(submitBtn);
 
   // Handle form submit
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    let score = 0;
+  form.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  let score = 0;
 
-    for (let i = 1; i <= questions.length; i++) {
-      const answer = form[`q${i}`].value;
-      score += parseInt(answer);
-    }
+  for (let i = 1; i <= questions.length; i++) {
+    const answer = form[`q${i}`].value;
+    score += parseInt(answer);
+  }
 
-    let personality = "";
-    if (score <= 10) {
-      personality = "🧠 Reflective Thinker — calm, logical, and introspective.";
-    } else if (score <= 20) {
-      personality = "🔍 Balanced Explorer — adaptable, thoughtful, and open-minded.";
-    } else {
-      personality = "🌟 Expressive Idealist — creative, social, and emotionally aware.";
-    }
+  let personality = "";
+  if (score <= 10) {
+    personality = "🧠 Reflective Thinker — calm, logical, and introspective.";
+  } else if (score <= 20) {
+    personality = "🔍 Balanced Explorer — adaptable, thoughtful, and open-minded.";
+  } else {
+    personality = "🌟 Expressive Idealist — creative, social, and emotionally aware.";
+  }
 
-    resultDiv.style.display = 'block';
-    resultDiv.innerHTML = `
-      <h3>Your Personality Result:</h3>
-      <p>${personality}</p>
-      <div style="margin-top: 1.5rem;">
-        <a href="main2.html" class="start-btn" style="margin-right: 1rem;">🏠 Back to Home</a>
-        <button onclick="location.reload()" class="start-btn">🔁 Retake Test</button>
-      </div>
-    `;
-    form.style.display = 'none';
-  });
+  // Send to backend
+  try {
+    await fetch("/api/save-result", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        score,
+        personality,
+        timestamp: new Date().toISOString()
+      })
+    });
+  } catch (err) {
+    console.error("Failed to send result:", err);
+  }
+
+  resultDiv.style.display = 'block';
+  resultDiv.innerHTML = `
+    <h3>Your Personality Result:</h3>
+    <p>${personality}</p>
+    <div style="margin-top: 1.5rem;">
+      <a href="main2.html" class="start-btn" style="margin-right: 1rem;">🏠 Back to Home</a>
+      <button onclick="location.reload()" class="start-btn">🔁 Retake Test</button>
+    </div>
+  `;
+  form.style.display = 'none';
+});
